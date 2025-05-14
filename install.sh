@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/zsh
 # デフォルトの保存先ディレクトリ
 DEFAULT_DIR="$HOME/.local/bin/nlpzoom"
 
@@ -28,10 +28,5 @@ curl -fsSL "https://raw.githubusercontent.com/fuji029/nlpzoom/refs/heads/main/sc
 
 chmod 755 $save_dir/nlpzoom.sh
 touch $save_dir/.env
-
-if ! echo "$PATH" | grep -q "$save_dir"; then
-    echo "export PATH=\"$save_dir:$PATH\"" >> "$HOME/.zshrc"
-    source $HOME/.zshrc
-fi
 
 echo "✅Install Completed!"
