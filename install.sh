@@ -29,4 +29,9 @@ curl -fsSL "https://raw.githubusercontent.com/fuji029/nlpzoom/refs/heads/main/sc
 chmod 755 $save_dir/nlpzoom.sh
 touch $save_dir/.env
 
+if ! echo "$PATH" | grep -q "$save_dir"; then
+    echo "export PATH=\"$save_dir:\$PATH\"" >> "$HOME/.zshrc"
+    echo "\"source .zshrc\"を実行してください．"
+fi
+
 echo "✅Install Completed!"
