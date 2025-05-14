@@ -1,5 +1,5 @@
 #! /bin/sh
-SCRIPT_DIR=#(dirname $(readlink -f $0))
+SCRIPT_DIR=$(dirname $(readlink -f $0))
 source $SCRIPT_DIR/.env
 if [ -z "$ZOOM_ID_REPO" ] || [ -z "$ZOOM_PWD_REPO" ] || [ -z "$ZOOM_ID_MTG" ] || [ -z "$ZOOM_PWD_MTG" ]; then
     echo "⚠️Error: Zoom meetingのIDとPASSWORDを環境変数に設定してください" >&2
