@@ -26,7 +26,7 @@ mkdir -p "$save_dir"
 
 curl -fsSL "https://raw.githubusercontent.com/fuji029/nlpzoom/refs/heads/main/script/open.sh" -o "$save_dir/nlpzoom.sh"
 
-chmod 755 $save_dir/open.sh
+chmod 755 $save_dir/nlpzoom.sh
 touch $save_dir/.env
 
 if ! echo "$PATH" | grep -q "$INSTALL_DIR"; then
